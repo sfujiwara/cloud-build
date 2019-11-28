@@ -1,0 +1,10 @@
+steps:
+
+- name: "ubuntu"
+  args: ["echo", "hello"]
+
+- name: "google/cloud-sdk"
+  args: 
+    - "./bin/run_query.sh"
+    - "queries/hello.sql"
+    - "${PROJECT_ID}:sandbox.hello"
