@@ -12,7 +12,7 @@ SQL_FILE=${1}
 DESTINATION_TABLE=${2}
 
 bq query \
-  --use_legacy_sql false \
-  --destination_table ${DESTINATION_TABLE} \
-  --replace false \
+  --use_legacy_sql=false \
+  --replace=false \
+  --destination_table=${DESTINATION_TABLE} \
   < ${SQL_FILE}
